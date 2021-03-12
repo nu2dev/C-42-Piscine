@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: unarasim <unarasim@student.42kl.edu>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/07 13:26:24 by unarasim          #+#    #+#             */
+/*   Updated: 2021/03/08 09:10:37 by unarasim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
+{
+/*	while (n > 0 && *s1 && *s2)
+	{
+		if (*s1 != *s2)
+			return (*(unsigned char*)s1 - *(unsigned char*)s2);
+		n--;
+		s1++;
+		s2++;
+	}
+	if (n == 0)
+		return (0);
+	return (*(unsigned char*)s1 - *(unsigned char*)s2);
+}
+*/
+
+
+	if (n == 0)
+		return (0);
+	while ((*s1 == *s2) && n > 0)
+	{
+		s1++;
+		s2++;
+		n--;
+	}
+	return (*(unsigned char*)s1 - *(unsigned char*)s2);
+}
